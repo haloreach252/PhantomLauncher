@@ -8,13 +8,19 @@ This is a living document and can change pretty quickly.
 
 ---
 
-**Main Features Include:**
+**Main launcher features may include:**
 * Chat System
 * Friends
 * Shopping Cart
 * Game Store
 * News
 * Game Library
+
+---
+
+**Game page features may include:**
+* Game news
+* Game overview
 * A form of achievements with a different name
 
 ---
