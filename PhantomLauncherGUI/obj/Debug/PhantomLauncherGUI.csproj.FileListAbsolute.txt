@@ -1,0 +1,15 @@
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\bin\Debug\PhantomLauncherGUI.exe.config
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\bin\Debug\PhantomLauncherGUI.exe
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\bin\Debug\PhantomLauncherGUI.pdb
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\PhantomLauncherGUI.csprojAssemblyReference.cache
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\MainWindow.g.cs
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\App.g.cs
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\PhantomLauncherGUI_MarkupCompile.cache
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\PhantomLauncherGUI_MarkupCompile.lref
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\MainWindow.baml
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\PhantomLauncherGUI.g.resources
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\PhantomLauncherGUI.Properties.Resources.resources
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\PhantomLauncherGUI.csproj.GenerateResource.cache
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\PhantomLauncherGUI.exe
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\PhantomLauncherGUI.pdb
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\App.baml
