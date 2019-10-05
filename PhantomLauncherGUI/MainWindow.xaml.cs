@@ -15,14 +15,49 @@ using System.Windows.Shapes;
 
 namespace PhantomLauncherGUI
 {
-	/// <summary>
-	/// Interaction logic for MainWindow.xaml
-	/// </summary>
 	public partial class MainWindow : Window
 	{
-		public MainWindow()
-		{
+
+		private Dictionary<string, string> fontAwesomeGlyphs = new Dictionary<string, string>();
+
+		public MainWindow(){
 			InitializeComponent();
+			ResizeComponents();
+
+			fontAwesomeGlyphs.Add("power-off","");
+			powerOffLabel.Content = fontAwesomeGlyphs["power-off"];
+
+			exitApplicationButton.Click += ExitApplication;
+			minimizeApplicationButton.Click += MinimizeApplication;
+			maximizeApplicationButton.Click += MaximizeApplication;
 		}
+
+		private void ResizeComponents() {
+			titleBarBackground.Width = Width;
+		}
+
+		private void MinimizeApplication(object sender, EventArgs e) {
+			WindowState = WindowState.Minimized;
+		}
+
+		private void MaximizeApplication(object sender, EventArgs e) {
+			if(WindowState == WindowState.Maximized) {
+				WindowState = WindowState.Normal;
+			} else {
+				WindowState = WindowState.Maximized;
+			}
+
+			ResizeComponents();
+
+		}
+
+		private void ExitApplication(object sender, EventArgs e){
+			Application.Current.Shutdown();
+		}
+
+		private void OnSizeChanged(object sender, EventArgs e) {
+			ResizeComponents();
+		}
+
 	}
 }
