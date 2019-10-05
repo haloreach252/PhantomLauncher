@@ -32,6 +32,14 @@ This is a living document and can change pretty quickly.
 
 ---
 
-**Please direct any questions to HaloReach252**
-* Discord: HaloReach252#3609
-* Email: HaloReach252@gmail.com
+## Questions
+
+---
+
+**Contact either HaloReach252 or Chloe for questions**
+* HaloReach252
+	* Discord: HaloReach252#3609
+	* Email: HaloReach252@gmail.com
+* Chloe
+	* Discord: Chloe#0327
+	* Email: TBD
