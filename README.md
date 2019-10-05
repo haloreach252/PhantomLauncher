@@ -6,6 +6,8 @@ This is a living document and can change pretty quickly.
 
 ---
 
+## Features
+
 **Main launcher features may include:**
 * Chat System
 * Friends
