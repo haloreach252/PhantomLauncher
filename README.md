@@ -40,4 +40,4 @@ This is a living document and can change pretty quickly.
 	* Email: HaloReach252@gmail.com
 * Chloe
 	* Discord: Chloe#0327
-	* Email: TBD
+	* Email: snowfoxsoftwaretm@gmail.com
