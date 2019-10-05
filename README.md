@@ -41,3 +41,11 @@ This is a living document and can change pretty quickly.
 * Chloe
 	* Discord: Chloe#0327
 	* Email: snowfoxsoftwaretm@gmail.com
+
+<!--- TODO --->
+<!--- Better Description --->
+<!--- Screenshots --->
+<!--- Better Looking Feature lists --->
+<!--- Current Roadmap --->
+<!--- Authors --->
+<!--- Project Status --->
