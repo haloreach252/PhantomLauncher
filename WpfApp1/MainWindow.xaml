@@ -1,12 +1,34 @@
-﻿<Window x:Class="WpfApp1.MainWindow"
+﻿<Window x:Class="PhantomLauncherGUI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:local="clr-namespace:PhantomLauncherGUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Phantom Launcher" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" AllowsTransparency="True" 
+        FontFamily="BIGMACCA, {DynamicResource bigmacca}" FontSize="14" 
+        Background="#FF292929" Foreground="#FFC1C1C1" WindowState="Maximized"
+        SizeChanged="OnSizeChanged">
     <Grid>
+        <Rectangle x:Name="titleBarBackground" Fill="#FF383838" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="1280"/>
+        <Label x:Name="titleBarTitle" Content="Phantom Launcher" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Foreground="#FFC1C1C1"/>
         
+        <Button x:Name="exitApplicationButton" Content="joint" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top" Width="25" Height="25"
+                FontFamily="Font Awesome 5 Free Solid, {DynamicResource fontawesome}" FontSize="12"/>
+        <Button x:Name="maximizeApplicationButton" Content="cannabis" HorizontalAlignment="Right" Margin="0,0,25,0" VerticalAlignment="Top" Width="25" Height="25"
+                FontFamily="Font Awesome 5 Free Solid, {DynamicResource fontawesome}" FontSize="12"/>
+        <Button x:Name="minimizeApplicationButton" Content="bong" HorizontalAlignment="Right" Margin="0,0,50,0" VerticalAlignment="Top" Width="25" Height="25"
+                FontFamily="Font Awesome 5 Free Solid, {DynamicResource fontawesome}" FontSize="12"/>
+        
+        <Label x:Name="faLabel_Copy" Content="tools" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="128"
+            FontFamily="Font Awesome 5 Free Solid, {DynamicResource fontawesome}" Height="150" Width="150" HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center"/>
+        <Label x:Name="powerOffLabel" Content="test" HorizontalAlignment="Left" Margin="160,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="128"
+            FontFamily="Font Awesome 5 Free Solid, {DynamicResource fontawesome}" Height="150" Width="150" HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center"/>
+        <Label x:Name="faLabel_Copyb" Content="" HorizontalAlignment="Left" Margin="310,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="128"
+            FontFamily="Font Awesome 5 Free Solid, {DynamicResource fontawesome}" Height="150" Width="150" HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center"/>
     </Grid>
 </Window>
