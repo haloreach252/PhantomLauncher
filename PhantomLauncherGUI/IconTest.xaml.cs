@@ -54,10 +54,19 @@ namespace PhantomLauncherGUI {
 			loaded = true;
 		}
 
+		public void ResizePage(double width, double height) {
+			if (double.IsNaN(width)) {
+				width = MainWindow.DefaultWidth;
+			}
+			Height = height - 45;
+			Width = width - 20;
+			ResizeLabels(Width);
+		}
+
 		public void ResizeLabels(double width) {
 			int widthMod = 0;
 			int heightMod = 0;
-			if(double.IsNaN(width)) {
+			if (double.IsNaN(width)) {
 				width = MainWindow.DefaultWidth;
 			}
 			for (int i = 0; i < labels.Count; i++) {

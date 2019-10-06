@@ -39,11 +39,9 @@ namespace PhantomLauncherGUI
 			ResizeTitleButton(maximizeApplicationButton, 1);
 			ResizeTitleButton(minimizeApplicationButton, 2);
 
-			iconTestFrame.Height = Height - 45;
-			iconTestFrame.Width = Width - 20;
 			page = (IconTest)iconTestFrame.Content;
 			if(page != null && page.loaded) {
-				page.ResizeLabels(Width);
+				page.ResizePage(Width, Height);
 			}
 		}
 

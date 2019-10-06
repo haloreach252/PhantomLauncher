@@ -1,0 +1,5 @@
+0.0.0 c
+
+MAJOR.MINOR.PATCH type (prerelease, alpha, beta, etc)
+
+current version: 0.0.1 setup
