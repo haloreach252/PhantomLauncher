@@ -58,6 +58,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ContextBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameLibrary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="IconTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -70,7 +78,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ContextBar.xaml.cs">
+      <DependentUpon>ContextBar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Definitions.cs" />
+    <Compile Include="GameLibrary.xaml.cs">
+      <DependentUpon>GameLibrary.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IconTest.xaml.cs">
       <DependentUpon>IconTest.xaml</DependentUpon>
     </Compile>

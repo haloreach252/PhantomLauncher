@@ -19,30 +19,54 @@ namespace PhantomLauncherGUI
 	{
 		public static double DefaultWidth = 1280;
 
-		private IconTest page;
+		private Uri currentTestUri = new Uri("pack://application:,,,/GameLibrary.xaml");
+
+		private ContextBar contextBar;
+		//private IconTest iconTestPage;
 
 		public MainWindow(){
 			InitializeComponent();
-			iconTestFrame.Source = new Uri("pack://application:,,,/IconTest.xaml");
-			ResizeComponents();
+			currentTestFrame.Source = currentTestUri;
+			//iconTestFrame.Source = new Uri("pack://application:,,,/IconTest.xaml");
 			Definitions.Initialize();
+
+			contextBar = new ContextBar();
+
 		}
 
 		private void LoadedData(object sender, EventArgs e) {
 			ResizeComponents();
+
+			SetIcons();
+
+			contextBarContent.Content = contextBar;
 		}
 
 		private void ResizeComponents() {
+			// TITLE BAR AREA //
 			titleBarBackground.Width = Width;
+			titleBarTitle.FontSize = titleBarBackground.Height - 5;
 
 			ResizeTitleButton(exitApplicationButton, 0);
 			ResizeTitleButton(maximizeApplicationButton, 1);
 			ResizeTitleButton(minimizeApplicationButton, 2);
 
-			page = (IconTest)iconTestFrame.Content;
-			if(page != null && page.loaded) {
-				page.ResizePage(Width, Height);
-			}
+			// CONTEXT BAR AREA //
+			//contextBarBackground.Width = Width;
+
+			// CURRENT CONTENT AREA //
+			currentTestFrame.Width = Width - 20;
+			currentTestFrame.Height = Height - 85;
+			/*iconTestPage = (IconTest)iconTestFrame.Content;
+			if(iconTestPage != null && iconTestPage.loaded) {
+				iconTestPage.ResizePage(Width, Height);
+			}*/
+		}
+
+		private void SetIcons() {
+			exitApplicationButton.Content = Definitions.instance.GetTaggedGlyph(exitApplicationButton.Tag.ToString());
+			maximizeApplicationButton.Content = Definitions.instance.GetTaggedGlyph(maximizeApplicationButton.Tag.ToString());
+			minimizeApplicationButton.Content = Definitions.instance.GetTaggedGlyph(minimizeApplicationButton.Tag.ToString());
 		}
 
 		private void ResizeTitleButton(Button b, int thicknessModifier) {

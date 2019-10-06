@@ -10,16 +10,28 @@
         FontFamily="BIGMACCA, ./Fonts/#BIGMACCA" FontSize="14" 
         Background="#FF292929" Foreground="#FFC1C1C1" WindowState="Normal"
         SizeChanged="OnSizeChanged" Loaded="LoadedData">
-    <Grid>
-        <Rectangle x:Name="titleBarBackground" Fill="#FF383838" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="1280" MouseDown="OnMouseDown"/>
-        <Label x:Name="titleBarTitle" Content="Phantom Launcher" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" Foreground="#FFC1C1C1" Tag="resize"/>
 
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type local:ContextBar}">
+            <local:ContextBar />
+        </DataTemplate>
+    </Window.Resources>
+    
+    <Grid>
+        <!-- TITLE BAR -->
+        <Rectangle x:Name="titleBarBackground" Fill="#FF383838" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="1280" MouseDown="OnMouseDown"/>
+        <Label x:Name="titleBarTitle" Content="Phantom Launcher" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Foreground="#FFC1C1C1" Tag="resize"/>
         <Button x:Name="exitApplicationButton" Content="joint" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top" Width="25" Height="25"
-                FontFamily="./Fonts/#Font Awesome 5 Free Solid" FontSize="12" Click="ExitApplication"/>
+            FontFamily="./Fonts/#Font Awesome 5 Free Solid" FontSize="12" Click="ExitApplication" Tag="exit"/>
         <Button x:Name="maximizeApplicationButton" Content="cannabis" HorizontalAlignment="Right" Margin="0,0,25,0" VerticalAlignment="Top" Width="25" Height="25"
-                FontFamily="./Fonts/#Font Awesome 5 Free Solid" FontSize="12" Click="MaximizeApplication"/>
+            FontFamily="./Fonts/#Font Awesome 5 Free Solid" FontSize="12" Click="MaximizeApplication" Tag="maximize"/>
         <Button x:Name="minimizeApplicationButton" Content="bong" HorizontalAlignment="Right" Margin="0,0,50,0" VerticalAlignment="Top" Width="25" Height="25"
-                FontFamily="./Fonts/#Font Awesome 5 Free Solid" FontSize="12" Click="MinimizeApplication"/>
-        <Frame x:Name="iconTestFrame" HorizontalAlignment="Left" Height="675" Margin="10,35,10,10" VerticalAlignment="Top" Width="1260"/>
+            FontFamily="./Fonts/#Font Awesome 5 Free Solid" FontSize="12" Click="MinimizeApplication" Tag="minimize"/>
+
+        <!-- CONTEXT BAR -->
+        <ContentControl x:Name="contextBarContent" Width="1280" Height="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,35,0,0"/>
+
+        <!-- CURRENT CONTENT -->
+        <Frame x:Name="currentTestFrame" HorizontalAlignment="Left" Height="605" Margin="10,110,0,0" VerticalAlignment="Top" Width="1260"/>
     </Grid>
 </Window>

@@ -1,5 +1,5 @@
 ﻿{
-  "exit-button": "power-off",
-  "minimize-button": "grip-lines",
-  "maximize-button": "expand"
+  "exit": "power-off",
+  "minimize": "grip-lines",
+  "maximize": "expand"
 }

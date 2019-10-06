@@ -20,3 +20,8 @@ H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\PhantomLaunche
 H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\bin\Debug\Definitions\IconGlyphs.json
 H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\IconTest.g.cs
 H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\IconTest.baml
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\GameLibrary.g.cs
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\GameLibrary.baml
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\ContextBar.g.cs
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\ContextBar.baml

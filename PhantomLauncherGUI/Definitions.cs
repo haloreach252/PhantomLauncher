@@ -35,6 +35,14 @@ namespace PhantomLauncherGUI {
 			glyphDefinitions = GetDefinition(DefinitionType.GLYPH);
 		}
 
+		public string GetTaggedGlyph(string tag) {
+			if (iconDefinitions.ContainsKey(tag)) {
+				return glyphDefinitions[iconDefinitions[tag]];
+			} else {
+				return glyphDefinitions["ban"];
+			}
+		}
+
 		private Dictionary<string, string> GetDefinition(DefinitionType type) {
 			Dictionary<string, string> dic = new Dictionary<string, string>();
 			string path = $"{AppDomain.CurrentDomain.BaseDirectory}/Definitions/";

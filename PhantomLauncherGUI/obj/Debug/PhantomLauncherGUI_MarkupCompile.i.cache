@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\App.xaml
-2-1878228263
+4-1882673375
 21294469715
-81841726728
+10-1615640354
 141504700272
-IconTest.xaml;MainWindow.xaml;
+ContextBar.xaml;GameLibrary.xaml;IconTest.xaml;MainWindow.xaml;
 
-False
+True
 
