@@ -17,23 +17,59 @@ namespace PhantomLauncherGUI
 {
 	public partial class MainWindow : Window
 	{
+		public static double DefaultWidth = 1280;
 
-		private Dictionary<string, string> fontAwesomeGlyphs = new Dictionary<string, string>();
+		private IconTest page;
 
 		public MainWindow(){
 			InitializeComponent();
+			iconTestFrame.Source = new Uri("pack://application:,,,/IconTest.xaml");
 			ResizeComponents();
+			Definitions.Initialize();
+		}
 
-			fontAwesomeGlyphs.Add("power-off","");
-			powerOffLabel.Content = fontAwesomeGlyphs["power-off"];
-
-			exitApplicationButton.Click += ExitApplication;
-			minimizeApplicationButton.Click += MinimizeApplication;
-			maximizeApplicationButton.Click += MaximizeApplication;
+		private void LoadedData(object sender, EventArgs e) {
+			ResizeComponents();
 		}
 
 		private void ResizeComponents() {
 			titleBarBackground.Width = Width;
+
+			ResizeTitleButton(exitApplicationButton, 0);
+			ResizeTitleButton(maximizeApplicationButton, 1);
+			ResizeTitleButton(minimizeApplicationButton, 2);
+
+			iconTestFrame.Height = Height - 45;
+			iconTestFrame.Width = Width - 20;
+			page = (IconTest)iconTestFrame.Content;
+			if(page != null && page.loaded) {
+				page.ResizeLabels(Width);
+			}
+		}
+
+		private void ResizeTitleButton(Button b, int thicknessModifier) {
+			b.Height = titleBarBackground.Height;
+			b.Width = b.Height;
+			b.Margin = new Thickness(0, 0, b.Width * thicknessModifier, 0);
+		}
+
+		private void AdjustWindowSize() {
+			if (WindowState == WindowState.Maximized) {
+				WindowState = WindowState.Normal;
+			} else {
+				WindowState = WindowState.Maximized;
+			}
+		}
+
+		#region Events
+		private void OnMouseDown(object sender, MouseButtonEventArgs e) {
+			if (e.ChangedButton == MouseButton.Left) {
+				if (e.ClickCount == 2) {
+					AdjustWindowSize();
+				} else {
+					Application.Current.MainWindow.DragMove();
+				}
+			}
 		}
 
 		private void MinimizeApplication(object sender, EventArgs e) {
@@ -41,14 +77,7 @@ namespace PhantomLauncherGUI
 		}
 
 		private void MaximizeApplication(object sender, EventArgs e) {
-			if(WindowState == WindowState.Maximized) {
-				WindowState = WindowState.Normal;
-			} else {
-				WindowState = WindowState.Maximized;
-			}
-
-			ResizeComponents();
-
+			AdjustWindowSize();
 		}
 
 		private void ExitApplication(object sender, EventArgs e){
@@ -58,6 +87,6 @@ namespace PhantomLauncherGUI
 		private void OnSizeChanged(object sender, EventArgs e) {
 			ResizeComponents();
 		}
-
+		#endregion
 	}
 }

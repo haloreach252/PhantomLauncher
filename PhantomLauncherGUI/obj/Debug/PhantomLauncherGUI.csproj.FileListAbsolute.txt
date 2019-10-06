@@ -12,4 +12,11 @@ H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\PhantomLaunche
 H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\PhantomLauncherGUI.csproj.GenerateResource.cache
 H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\PhantomLauncherGUI.exe
 H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\PhantomLauncherGUI.pdb
-H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\App.baml
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\bin\Debug\Newtonsoft.Json.dll
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\bin\Debug\Newtonsoft.Json.xml
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\PhantomLauncherGUI.csproj.CopyComplete
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\bin\Debug\Definitions\IconDefinitions.json
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\PhantomLauncherGUI_Content.g.cs
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\bin\Debug\Definitions\IconGlyphs.json
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\IconTest.g.cs
+H:\Coding\C#Projects\PhantomLauncher\PhantomLauncherGUI\obj\Debug\IconTest.baml
