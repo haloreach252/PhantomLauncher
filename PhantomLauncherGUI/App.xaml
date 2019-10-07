@@ -4,7 +4,6 @@
              xmlns:local="clr-namespace:PhantomLauncherGUI"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <FontFamily x:Key="bigmacca">pack://application:,,,/Fonts/#BIGMACCA</FontFamily>
-        <FontFamily x:Key="fontawesome">pack://application:,,,/Fonts/#Font Awesome 5 Free Solid</FontFamily>
+        
     </Application.Resources>
 </Application>

@@ -7,28 +7,31 @@
         mc:Ignorable="d"
         Title="Phantom Launcher" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" 
         WindowStyle="None" AllowsTransparency="True" 
-        FontFamily="BIGMACCA, {DynamicResource bigmacca}" FontSize="14" 
-        Background="#FF292929" Foreground="#FFC1C1C1" WindowState="Maximized"
-        SizeChanged="OnSizeChanged">
+        FontFamily="BIGMACCA, ./Fonts/#BIGMACCA" FontSize="14" 
+        Background="#FF292929" Foreground="#FFC1C1C1" WindowState="Normal"
+        SizeChanged="OnSizeChanged" Loaded="LoadedData">
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type local:ContextBar}">
+            <local:ContextBar />
+        </DataTemplate>
+    </Window.Resources>
+    
     <Grid>
-        <Rectangle x:Name="titleBarBackground" Fill="#FF383838" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="1280"/>
-        <Label x:Name="titleBarTitle" Content="Phantom Launcher" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Foreground="#FFC1C1C1"/>
-        
+        <!-- TITLE BAR -->
+        <Rectangle x:Name="titleBarBackground" Fill="#FF383838" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="1280" MouseDown="OnMouseDown"/>
+        <Label x:Name="titleBarTitle" Content="Phantom Launcher" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Foreground="#FFC1C1C1" Tag="resize"/>
         <Button x:Name="exitApplicationButton" Content="joint" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top" Width="25" Height="25"
-                FontFamily="Font Awesome 5 Free Solid, {DynamicResource fontawesome}" FontSize="12"/>
+            FontFamily="./Fonts/#Font Awesome 5 Free Solid" FontSize="12" Click="ExitApplication" Tag="exit"/>
         <Button x:Name="maximizeApplicationButton" Content="cannabis" HorizontalAlignment="Right" Margin="0,0,25,0" VerticalAlignment="Top" Width="25" Height="25"
-                FontFamily="Font Awesome 5 Free Solid, {DynamicResource fontawesome}" FontSize="12"/>
+            FontFamily="./Fonts/#Font Awesome 5 Free Solid" FontSize="12" Click="MaximizeApplication" Tag="maximize"/>
         <Button x:Name="minimizeApplicationButton" Content="bong" HorizontalAlignment="Right" Margin="0,0,50,0" VerticalAlignment="Top" Width="25" Height="25"
-                FontFamily="Font Awesome 5 Free Solid, {DynamicResource fontawesome}" FontSize="12"/>
-        
-        <Label x:Name="faLabel_Copy" Content="tools" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="128"
-            FontFamily="Font Awesome 5 Free Solid, {DynamicResource fontawesome}" Height="150" Width="150" HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"/>
-        <Label x:Name="powerOffLabel" Content="test" HorizontalAlignment="Left" Margin="160,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="128"
-            FontFamily="Font Awesome 5 Free Solid, {DynamicResource fontawesome}" Height="150" Width="150" HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"/>
-        <Label x:Name="faLabel_Copyb" Content="" HorizontalAlignment="Left" Margin="310,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="128"
-            FontFamily="Font Awesome 5 Free Solid, {DynamicResource fontawesome}" Height="150" Width="150" HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"/>
+            FontFamily="./Fonts/#Font Awesome 5 Free Solid" FontSize="12" Click="MinimizeApplication" Tag="minimize"/>
+
+        <!-- CONTEXT BAR -->
+        <ContentControl x:Name="contextBarContent" Width="1280" Height="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,35,0,0"/>
+
+        <!-- CURRENT CONTENT -->
+        <Frame x:Name="currentTestFrame" HorizontalAlignment="Left" Height="605" Margin="10,110,0,0" VerticalAlignment="Top" Width="1260"/>
     </Grid>
 </Window>
