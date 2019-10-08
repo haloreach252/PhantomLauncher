@@ -10,26 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace PhantomLauncherGUI {
 	/// <summary>
-	/// Interaction logic for ContextBar.xaml
+	/// Interaction logic for StartupWindow.xaml
 	/// </summary>
-	public partial class ContextBar : UserControl {
-
-		private MainWindow parentWindow;
-
-		public ContextBar(MainWindow parentWindow) {
+	public partial class StartupWindow : Window {
+		public StartupWindow() {
 			InitializeComponent();
-			this.parentWindow = parentWindow;
 		}
-
-		private void ContextMenuClick(object sender, EventArgs e) {
-			string pageName = ((Button)sender).Tag.ToString();
-			parentWindow.SetContent(pageName);
-		}
-
 	}
 }

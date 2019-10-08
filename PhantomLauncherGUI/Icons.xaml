@@ -1,12 +1,12 @@
-﻿<UserControl x:Class="PhantomLauncherGUI.GameLibrary"
+﻿<UserControl x:Class="PhantomLauncherGUI.Icons"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PhantomLauncherGUI"
              mc:Ignorable="d" 
-             Width="1260" Height="605" Background="#FF454545">
-    <Grid>
-            
+             d:DesignHeight="600" d:DesignWidth="1260" Loaded="LoadLabels">
+    <Grid x:Name="iconsGrid">
+        <Rectangle Fill="Black"/>
     </Grid>
 </UserControl>

@@ -11,12 +11,6 @@
         Background="#FF292929" Foreground="#FFC1C1C1" WindowState="Normal"
         SizeChanged="OnSizeChanged" Loaded="LoadedData">
 
-    <Window.Resources>
-        <DataTemplate DataType="{x:Type local:ContextBar}">
-            <local:ContextBar />
-        </DataTemplate>
-    </Window.Resources>
-    
     <Grid>
         <!-- TITLE BAR -->
         <Rectangle x:Name="titleBarBackground" Fill="#FF383838" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="1280" MouseDown="OnMouseDown"/>
@@ -29,9 +23,13 @@
             FontFamily="./Fonts/#Font Awesome 5 Free Solid" FontSize="12" Click="MinimizeApplication" Tag="minimize"/>
 
         <!-- CONTEXT BAR -->
-        <ContentControl x:Name="contextBarContent" Width="1280" Height="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,35,0,0"/>
+        <ContentControl x:Name="contextBarContent" Width="1280" Height="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,30,0,0" 
+                        VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"/>
 
         <!-- CURRENT CONTENT -->
-        <Frame x:Name="currentTestFrame" HorizontalAlignment="Left" Height="605" Margin="10,110,0,0" VerticalAlignment="Top" Width="1260"/>
+        <ContentControl x:Name="mainContentControl" Width="1260" Height="600" Margin="10,110,10,10"
+                        VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"/>
+        <!--<Frame x:Name="currentTestFrame" HorizontalAlignment="Left" Height="605" Margin="10,110,0,0" VerticalAlignment="Top" Width="1260"/>-->
+        <!-- -->
     </Grid>
 </Window>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace PhantomLauncherGUI
 {
@@ -22,16 +23,18 @@ namespace PhantomLauncherGUI
 		private Uri currentTestUri = new Uri("pack://application:,,,/GameLibrary.xaml");
 
 		private ContextBar contextBar;
+		private GameLibrary gameLibraryContent;
+		private Icons icons;
+		//private HomePage homePageContent;
 		//private IconTest iconTestPage;
 
 		public MainWindow(){
 			InitializeComponent();
-			currentTestFrame.Source = currentTestUri;
-			//iconTestFrame.Source = new Uri("pack://application:,,,/IconTest.xaml");
+			//currentTestFrame.Source = currentTestUri;
+			contextBar = new ContextBar(this);
+			gameLibraryContent = new GameLibrary();
+			icons = new Icons();
 			Definitions.Initialize();
-
-			contextBar = new ContextBar();
-
 		}
 
 		private void LoadedData(object sender, EventArgs e) {
@@ -39,7 +42,9 @@ namespace PhantomLauncherGUI
 
 			SetIcons();
 
+			//mainContentControl.Content = homePageContent;
 			contextBarContent.Content = contextBar;
+			mainContentControl.Content = icons;
 		}
 
 		private void ResizeComponents() {
@@ -52,15 +57,15 @@ namespace PhantomLauncherGUI
 			ResizeTitleButton(minimizeApplicationButton, 2);
 
 			// CONTEXT BAR AREA //
-			//contextBarBackground.Width = Width;
+			contextBarContent.Width = Width;
+			contextBar.Width = Width;
 
 			// CURRENT CONTENT AREA //
-			currentTestFrame.Width = Width - 20;
-			currentTestFrame.Height = Height - 85;
-			/*iconTestPage = (IconTest)iconTestFrame.Content;
-			if(iconTestPage != null && iconTestPage.loaded) {
-				iconTestPage.ResizePage(Width, Height);
-			}*/
+			mainContentControl.Width = Width - 20;
+			mainContentControl.Height = Height - 95;
+			icons.Width = mainContentControl.Width;
+			icons.Height = mainContentControl.Height;
+			icons.ResizeLabels(mainContentControl.Width);
 		}
 
 		private void SetIcons() {
@@ -75,11 +80,17 @@ namespace PhantomLauncherGUI
 			b.Margin = new Thickness(0, 0, b.Width * thicknessModifier, 0);
 		}
 
-		private void AdjustWindowSize() {
+		public void AdjustWindowSize() {
 			if (WindowState == WindowState.Maximized) {
 				WindowState = WindowState.Normal;
 			} else {
 				WindowState = WindowState.Maximized;
+			}
+		}
+
+		public void SetContent(string name) {
+			if(name == "library") {
+				mainContentControl.Content = gameLibraryContent;
 			}
 		}
 
@@ -102,7 +113,7 @@ namespace PhantomLauncherGUI
 			AdjustWindowSize();
 		}
 
-		private void ExitApplication(object sender, EventArgs e){
+		private void ExitApplication(object sender, EventArgs e) {
 			Application.Current.Shutdown();
 		}
 

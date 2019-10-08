@@ -7,8 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="70" d:DesignWidth="1280">
     <Grid>
-        <Rectangle x:Name="contextBarBackground" Fill="#FF383838" HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="1280" Margin="0,0,0,0"/>
-        <Button x:Name="contextLibraryButton" Content="Game Library" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Width="180" Height="50"
-                FontFamily="BIGMACCA, ./Fonts/#BIGMACCA" FontSize="16" Click="ContextMenuClick" Background="#FF292929" Foreground="#FFC1C1C1"/>
+        <Rectangle x:Name="contextBarBackground" Fill="#FF383838"/>
+        <StackPanel x:Name="contextBarLayout" Orientation="Horizontal">
+            <Button x:Name="contextLibraryButton" Content="Game Library" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" Width="180" Height="50"
+                FontFamily="BIGMACCA, ./Fonts/#BIGMACCA" FontSize="16" Click="ContextMenuClick" Background="#FF292929" Foreground="#FFC1C1C1" Tag="library"/>
+        </StackPanel>
+        
     </Grid>
 </UserControl>

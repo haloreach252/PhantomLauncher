@@ -16,33 +16,42 @@ using System.Diagnostics;
 
 namespace PhantomLauncherGUI {
 	/// <summary>
-	/// Interaction logic for IconTest.xaml
+	/// Interaction logic for Icons.xaml
 	/// </summary>
-	public partial class IconTest : Page {
+	public partial class Icons : UserControl {
 
 		private List<Label> labels;
 		public bool loaded = false;
 
-		public IconTest() {
+		private int iconSize = 100;
+		private int[] fontSize;
+
+		public Icons() {
 			InitializeComponent();
 			labels = new List<Label>();
 			loaded = false;
+			fontSize = new int[] {32,64,96,128};
 		}
 
 		private void LoadLabels(object sender, EventArgs e) {
+			for (int i = 0; i < 10; i++) {
+				CreateLabel("tools", $"label{i}t");
+				CreateLabel("mobile", $"label{i}m");
+				CreateLabel("power-off", $"label{i}p");
+			}
 			foreach (Label label in FindVisualChildren<Label>(this)) {
 				labels.Add(label);
 				if ((string)label.Tag == "labelGrid") {
-					label.Height = 150;
-					label.Width = 150;
-					label.FontSize = 128;
+					label.Height = iconSize;
+					label.Width = iconSize;
+					label.FontSize = fontSize[1];
 				}
 				if (Definitions.instance.glyphDefinitions.ContainsKey(label.Content.ToString())) {
 					label.Content = Definitions.instance.glyphDefinitions[label.Content.ToString()];
 				} else {
-					if(label.FontFamily.ToString() == "./Fonts/#Font Awesome 5 Free Solid") {
+					if (label.FontFamily.ToString() == "./Fonts/#Font Awesome 5 Free Solid") {
 						label.Content = Definitions.instance.glyphDefinitions["ban"];
-					} else if(label.FontFamily.ToString() == "./Fonts/#Font Awesome 5 Brands Regular") {
+					} else if (label.FontFamily.ToString() == "./Fonts/#Font Awesome 5 Brands Regular") {
 						label.Content = Definitions.instance.glyphDefinitions["slack"];
 					} else {
 						label.Content = "no";
@@ -52,6 +61,18 @@ namespace PhantomLauncherGUI {
 			}
 			ResizeLabels(Width);
 			loaded = true;
+		}
+
+		private void CreateLabel(string content, string name) {
+			Label l = new Label() {
+				Width = 150, Height = 150, FontSize = 128,
+				Foreground = Brushes.White,
+				Name = name, Content = content, Tag = "labelGrid",
+				HorizontalAlignment = HorizontalAlignment.Left, VerticalAlignment = VerticalAlignment.Top,
+				HorizontalContentAlignment = HorizontalAlignment.Center, VerticalContentAlignment = VerticalAlignment.Center,
+				FontFamily = new FontFamily(new Uri("pack://application:,,,/"), "./Fonts/#Font Awesome 5 Free Solid")
+			};
+			iconsGrid.Children.Add(l);
 		}
 
 		public void ResizePage(double width, double height) {
@@ -92,6 +113,5 @@ namespace PhantomLauncherGUI {
 				}
 			}
 		}
-
 	}
 }
