@@ -2,4 +2,4 @@
 
 MAJOR.MINOR.PATCH type (prerelease, alpha, beta, etc)
 
-current version: 0.0.1 setup
+current version: 0.0.2 setup
