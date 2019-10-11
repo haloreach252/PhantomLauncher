@@ -28,13 +28,6 @@ This is a living document and can change pretty quickly.
 
 ---
 
-**Third party features that may be included:**
-* Support for games created by third-party developers
-* Custom game theme support
-* Game reward system (for third-party)
-
----
-
 ## Questions
 
 **Contact either HaloReach252 or Chloe for questions**
